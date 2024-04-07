@@ -1,0 +1,40 @@
+﻿@model Produto
+
+
+<div class="row alert alert-danger text-center py-3 mb-4">
+    <div class="col-12">
+        <h2>Exclusão de Produtos</h2>
+        <hr />
+        <p>Atenção, após a exclusão a ação não poderá ser revertida.</p>
+    </div>
+</div>
+
+@if (ViewBag.Error == true)
+{
+    <div class="row my-3 text-center">
+        <div class="col-12">
+            <div class="alert alert-danger">
+                <h5>SENHA INVÁLIDA ⛔</h5>
+            </div>
+        </div>
+    </div>
+}
+
+
+<div class="row bg-secondary py-3">
+    <div class="col-12 text-center">
+        <form asp-action="Remove" asp-controller="Produtos">
+            <input type="hidden" value="@Model.Id" name="Id" />
+
+            <div class="col-12 col-md-4 m-auto">
+                <h4 class="text-light">Informe a senha</h4>
+                <input type="password" value="" name="senha" class="form-control m-auto" id="senha" required style="font-size:2em;height:35px;text-align:center;" />
+            </div>
+
+            <div class="my-3">
+                <input type="submit" class="btn btn-danger" value="Remover" />
+                <a asp-action="Index" asp-controller="Produtos" class="btn btn-primary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

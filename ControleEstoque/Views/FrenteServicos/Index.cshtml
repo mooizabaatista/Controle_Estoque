@@ -1,0 +1,91 @@
+﻿@model List<FrenteServico>
+
+@{
+    ViewData["Title"] = "Frente de Serviços";
+}
+
+<div class="row bg-secondary text-center py-3 mb-4 text-light">
+    <div class="col-12">
+        <h2>Lista de Frente de Serviços</h2>
+    </div>
+</div>
+
+<div class="row my-3 mb-4">
+    <div class="col-12">
+        <a asp-action="Create" asp-controller="FrenteServicos" class="btn btn-primary">Cadastrar Frente de Serviços</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center" id="tbFrenteServicos">
+                <thead>
+                    <tr>
+                        <th class="text-center ">Nome</th>
+                        <th class="text-center">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var frenteServico in Model)
+                    {
+                        <tr>
+                            <td>@frenteServico.Nome</td>
+                            <td class="d-flex justify-content-center align-items-center gap-3 no-print">
+                                <a asp-action="Edit" asp-controller="FrenteServicos" asp-route-id="@frenteServico.Id" class="btn btn-primary no-print"><i class="fas fa-edit"></i></a>
+                                <a asp-action="Remove" asp-controller="FrenteServicos" asp-route-id="@frenteServico.Id" class="btn btn-danger no-print"><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            var table = $('#tbFrenteServicos').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.0.3/i18n/pt-BR.json',
+                },
+                columnDefs: [
+                    { "orderable": false, "targets": [1] }
+                ],
+                dom: 'Blfrtip', // Adicionando l para o botão de comprimento
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        download: 'open',
+                        customize: function (doc) {
+                            doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                            doc.defaultStyle.alignment = 'center';
+                        },
+                        exportOptions: {
+                            columns: [0]
+                        }
+                    },
+                    'lengthMenu' // Adicionando o botão de comprimento aqui
+                ],
+                lengthMenu: [
+                    [10, 25, 50, -1],
+                    [10, 25, 50, 'Tudo']
+                ]
+            });
+
+
+            $('.btn-remover').click(function () {
+                if (confirm("Deseja realmente remover a frente de serviço?")) {
+                    // Submete o formulário associado ao botão clicado
+                    $(this).closest('form').submit();
+                } else {
+                    return false;
+                }
+            });
+        });
+
+
+    </script>
+}

@@ -1,0 +1,93 @@
+﻿@model Movimentacao
+
+
+<div class="row bg-secondary text-center py-3 mt-4 mb-3 text-light">
+    <div class="col-12">
+        <h2>Edição de Movimentação</h2>
+    </div>
+</div>
+
+
+@if (ViewBag.Error == true)
+{
+    <div class="row my-3 text-center">
+        <div class="col-12">
+            <div class="alert alert-danger">
+                <h4>Atenção, não é possivel retirar mais itens do que existem no estoque...</h4>
+            </div>
+        </div>
+    </div>
+}
+
+@if (ViewBag.ErrorSenha == true)
+{
+    <div class="row my-3 text-center">
+        <div class="col-12">
+            <div class="alert alert-danger">
+                <h5>SENHA INVÁLIDA ⛔</h5>
+            </div>
+        </div>
+    </div>
+}
+
+
+<form asp-action="Edit" asp-controller="Movimentacoes" method="post">
+    <input type="hidden" asp-for="Id" value="@Model.Id" />
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label>Produto</label>
+                <select class="form-control" asp-items="ViewBag.Produtos" asp-for="ProdutoId">
+                    <option value="">Selecione um produto</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label>Frente de Serviço</label>
+                <select class="form-control" asp-items="ViewBag.FrenteServicos" asp-for="FrenteServicoId" required>
+                    <option value="">Selecione uma frente de serviço</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label>Data</label>
+                <input type="Date" asp-for="Data" class="form-control" />
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label>Tipo de Movimentação</label>
+                <select asp-for="TipoMovimentacao" class="form-control">
+                    <option value="">Selecione...</option>
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-3">
+            <div class="form-group">
+                <label>Quantidade</label>
+                <input asp-for="Quantidade" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row my-3">
+        <div class="col-12 col-md-4 m-auto">
+            <h4 class="text-danger text-center">Informe a senha</h4>
+            <input type="password" value="" name="senha" class="form-control m-auto" id="senha" required style="font-size:2em;height:35px;text-align:center;" />
+        </div>
+    </div>
+
+
+    <div class="form-group my-3">
+        <input type="submit" value="Editar" class="btn btn-success" />
+        <a asp-action="Index" asp-controller="Movimentacoes" class="btn btn-primary">Voltar</a>
+    </div>
+</form>

@@ -1,0 +1,101 @@
+﻿@model List<Estoque>
+
+@{
+    ViewData["Title"] = "Estoque";
+}
+
+
+<div class="row bg-secondary text-center py-3 mt-4 mb-3 text-light">
+    <div class="col-12">
+        <h2>Itens do Estoque</h2>
+    </div>
+</div>
+
+<div class="row my-3">
+    <div class="col-12">
+        <a asp-action="Create" asp-controller="Estoque" class="btn btn-primary">Adicionar item no estoque</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center" id="tbEstoque">
+                <thead>
+                    <tr>
+                        <th class="text-center">Produto</th>
+                        <th class="text-center">Qtd Inicial</th>
+                        <th class="text-center">Entrada</th>
+                        <th class="text-center">Saida</th>
+                        <th class="text-center">Qtd Final</th>
+                        <th class="text-center">#</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var estoque in Model)
+                    {
+                        <tr>
+                            <td class="text-center">@estoque?.Produto?.Nome</td>
+                            <td class="text-center">@estoque?.QtdInicial</td>
+                            <td class="text-center">@estoque?.QtdEntrada</td>
+                            <td class="text-center">@estoque?.QtdSaida</td>
+                            <td class="fw-bold text-center @(estoque.EstoqueFinal >= 0 && estoque.EstoqueFinal <= 15 ? "bg-danger text-light" :
+                                   estoque.EstoqueFinal > 15 && estoque.EstoqueFinal <= 35 ? "bg-warning text-light" :
+                                   estoque.EstoqueFinal > 35 && estoque.EstoqueFinal < 100 ? "bg-primary text-light" :
+                                   estoque.EstoqueFinal >= 100 ? "bg-primary text-light" : "")">
+                                @estoque?.EstoqueFinal
+                            </td>
+                            <td class="d-flex justify-content-center align-items-center gap-3">
+                                <a asp-action="Edit" asp-controller="Estoque" asp-route-id="@estoque.Id" class="btn btn-primary "><i class="fas fa-edit"></i></a>
+                                <a asp-action="Remove" asp-controller="Estoque" asp-route-id="@estoque.Id" class="btn btn-danger "><i class="fas fa-trash"></i></a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#tbEstoque').DataTable({
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/2.0.3/i18n/pt-BR.json',
+                },
+                columnDefs: [
+                    { "orderable": false, "targets": [5] }
+                ],
+                dom: 'Blfrtip', // Adicionando l para o botão de comprimento
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        download: 'open',
+                        customize: function (doc) {
+                            doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                            doc.defaultStyle.alignment = 'center';
+                        },
+                        exportOptions: {
+                            columns: [0, 1, 2, 3, 4]
+                        }
+                    },
+                    'lengthMenu' // Adicionando o botão de comprimento aqui
+                ],
+                lengthMenu: [
+                    [10, 25, 50, -1],
+                    [10, 25, 50, 'Tudo']
+                ]
+            }); 
+
+            $('.btn-remover').click(function () {
+                if (confirm("Deseja realmente remover o item do estoque?")) {
+                    // Submete o formulário associado ao botão clicado
+                    $(this).closest('form').submit();
+                } else {
+                    return false;
+                }
+            });
+        });
+    </script>
+}

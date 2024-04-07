@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ControleEstoque
+build_property.RootNamespace = ControleEstoque
+build_property.ProjectDir = D:\Controle_Estoque_Danilo\ControleEstoque\ControleEstoque\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Controle_Estoque_Danilo\ControleEstoque\ControleEstoque
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Estoque/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Estoque/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Estoque/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Estoque/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0b3F1ZVxSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/FrenteServicos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJlbnRlU2Vydmljb3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/FrenteServicos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJlbnRlU2Vydmljb3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/FrenteServicos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJlbnRlU2Vydmljb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/FrenteServicos/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJlbnRlU2Vydmljb3NcUmVtb3ZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Movimentacoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY29lc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Movimentacoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY29lc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Movimentacoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY29lc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Movimentacoes/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY29lc1xSZW1vdmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Produtos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Produtos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Produtos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Produtos/Remove.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcUmVtb3ZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Controle_Estoque_Danilo/ControleEstoque/ControleEstoque/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xebu4eb36a

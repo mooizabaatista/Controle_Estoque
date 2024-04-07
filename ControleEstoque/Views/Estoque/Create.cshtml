@@ -1,0 +1,38 @@
+﻿@model Estoque
+
+
+<div class="row bg-secondary text-center py-3 mt-4 mb-3 text-light">
+    <div class="col-12">
+        <h2>Cadastrar Item no Estoque</h2>
+    </div>
+</div>
+
+
+<form asp-action="Create" asp-controller="Estoque" method="post">
+
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="form-group">
+                <label>Produto</label>
+                <select class="form-control" asp-items="ViewBag.Produtos" asp-for="ProdutoId" required>
+                    <option value="">Selecione um produto</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-2">
+            <div class="form-group">
+                <label>Quantidade Inicial</label>
+                <input asp-for="QtdInicial" class="form-control"/>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+    <div class="form-group my-3">
+        <input type="submit" value="Cadastrar" class="btn btn-success" />
+        <a asp-action="Index" asp-controller="Estoque" class="btn btn-primary">Voltar</a>
+    </div>
+</form>
